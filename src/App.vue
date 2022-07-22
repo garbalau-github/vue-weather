@@ -1,10 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <NavbarLinks />
+    <router-view />
+  </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import NavbarLinks from './components/NavbarLinks.vue';
+export default defineComponent({
+  components: {
+    NavbarLinks,
+  },
+});
+</script>
 
 <style lang="scss">
 #app {
